@@ -1,0 +1,23 @@
+{
+  "name": "store-api",
+  "version": "1.0.0",
+  "description": "Design a RESTful API for an online store which can be used to manage different products.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Ranvijay",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.2.1",
+    "q": "^1.5.0"
+  },
+  "devDependencies": {
+    "expect": "1.20.x",
+    "mocha": "3.1.x",
+    "should": "11.1.x",
+    "supertest": "2.0.x"
+  }
+}
