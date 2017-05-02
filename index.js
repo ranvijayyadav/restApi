@@ -17,8 +17,8 @@ var allowCrossDomain = function(req, res, next) {
 app.use(allowCrossDomain);
 
 
-//require('./services/global-user-service/routes.js')(app, router);
-//require('./services/module-service/routes.js')(app, router);
+
+require('./routes.js')(app, router);
 
 app.use('/api', router);
 

@@ -2,7 +2,8 @@
  * Created by ryadav on 4/30/17.
  */
 
-var userController=require('./controller/ususerController');
+var bodyParser = require('body-parser');
+var userController=require('./controller/userController');
 var productController=require('./controller/productController');
 var tokenValidate=require('./services/tokenService').validateToken;
 

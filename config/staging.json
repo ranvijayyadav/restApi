@@ -1,3 +1,7 @@
 {
-  "port": "3001"
+  "port": "3001",
+  "token": {
+    "expirationTime": 130,
+    "secretKey": "secret@123"
+  }
 }

@@ -5,9 +5,9 @@
 var Q = require("q");
 var jwt = require('jsonwebtoken');
 var env = process.env.NODE_ENV || 'local';
-var configs = require('./config/' + env + '.json');
+var config = require('./../config/' + env + '.json');
 
-var secretKey = config.secretKey;
+var secretKey = config.token.secretKey;
 var expirationTime = config.token.expirationTime * 60;
 module.exports.tokenGenerate = function(user) {
     var token = jwt.sign(user, secretKey);
