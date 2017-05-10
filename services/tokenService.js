@@ -21,7 +21,7 @@ module.exports.validateToken = function(req, res, next) {
             if (err) {
                 res.status(403).json({
                     success: false,
-                    message: "Failed to Authenticate User"
+                    message: err.message//"Failed to Authenticate User"
                 });
             } else {
                 next();

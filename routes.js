@@ -96,5 +96,6 @@ module.exports = function(app,router) {
 
 
     router.get('product/searchProduct',productController.searchProduct)
+    //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0Bscm4uY29tIiwiaWF0IjoxNDk0NDIyOTkzfQ.yjl4O_LBai9KwAvN21nDRdlxNYOXNk4WFIOsQrk0r_o
 
 }

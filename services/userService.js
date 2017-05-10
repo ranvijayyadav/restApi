@@ -11,27 +11,26 @@ module.exports={
         //async call to database
         //if user found deferred.resolve(newUser);
         //else deferred.reject(error)
+        setTimeout(function () {
+            deferred.resolve({email:email})
+        },10)
 
         return deferred.promise;
     },
 
-    validatePassword:function (userdata,password) {
+    validatePassword:function (userdata, password) {
         var deferred = Q.defer();
         //compare userdata.password with hash of password
         //compare hash in a loop so that it returns at same time interval in each case;
-
         // ajax request to database here to fetch the user datails
-
+        var self=this;
         setTimeout(function () {
-            if(this.encryptPassword(password)===this.encryptPassword(password)) {//compare the password provided by user with hash key stored in database
-
+            if(self.encryptPassword(password)===self.encryptPassword(password)) {//compare the password provided by user with hash key stored in database
                 deferred.resolve(userdata)//return user data with token
             } else {
                 deferred.reject(new Error("Invalid username or password"))
             }
-
         },1000)
-
         return deferred.promise;
     },
 
@@ -39,9 +38,7 @@ module.exports={
     addUser:function (userObject) {
         var addedUser, deferred;
         deferred = Q.defer();
-
         // ajax request to database here to add data to user simulating now with set timeout
-
         setTimeout(function () {
             if(userObject){
                 addedUser={
@@ -54,9 +51,7 @@ module.exports={
                 deferred.reject(new Error('Unable to add user'))
             }
         },1000)
-
         return deferred.promise;
-
     },
 
     /**
@@ -66,7 +61,7 @@ module.exports={
      * @return {String} Encrypted password string.
      */
     encryptPassword: function(password) {
-        var salt = 'salt';
+        var salt = 'salt';//this field should be configurable
         var passwordHash = crypto.createHash('sha256').update(salt.concat(crypto.createHash('sha256').update(password).digest('hex'))).digest('hex');
         return passwordHash;
     }

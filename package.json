@@ -4,7 +4,7 @@
   "description": "Design a RESTful API for an online store which can be used to manage different products.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha"
   },
   "author": "Ranvijay",
   "license": "ISC",
@@ -16,9 +16,8 @@
     "q": "^1.5.0"
   },
   "devDependencies": {
-    "expect": "1.20.x",
+    "chai": "^3.5.0",
     "mocha": "3.1.x",
-    "should": "11.1.x",
     "supertest": "2.0.x"
   }
 }
